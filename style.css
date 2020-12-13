@@ -3,6 +3,7 @@
 #backgroundSplashImg {
     width: 100vw;
     height: 100vh;
+    z-index: -100;
     position: relative;
 }
 
@@ -13,7 +14,7 @@
 
 @keyframes moveHeaderUp {
     from {top: 50%;}
-    to {top: 42%;}
+    to {top: 40%;}
 }
 
 #header {
@@ -36,11 +37,60 @@
     animation-fill-mode: forwards;
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        /*box-shadow: 0 0 0 0 rgb(55, 10, 176);*/
+    }
+
+    70% {
+        transform: scale(1.5);
+        /*box-shadow: 0 0 0 10px rgb(153, 25, 136);*/
+    }
+
+    100% {
+        transform: scale(0.95);
+        /*box-shadow: 0 0 0 0 rgba(55, 10, 176);*/
+    }
+}
+
 #playButton {
+    animation: pulse 2s infinite;
+    font-size: 80px;
     position: absolute;
+    z-index: 2;
+    top: 55%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    color: #b7138a;
+}
+
+#gameOptions {
+    position: absolute;
+    width: 100vw;
+    height: 20em;
     z-index: 2;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+#triviaIcon, #lyricIcon {
+    animation: pulse 4s infinite;
+    font-size: 13em;
+    color: #07dce5;
+}
+
+.gameTitles {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    font-family: 'New Rocker', cursive;
+    color: #b7138a;
+    text-shadow: 2px 2px 4px #1b0230, 0 0 25px #ebebee, 0 0 10px darkblue;
+    font-size: 3em;
+}
+
+.gameTitles:hover {
+    text-shadow: 2px 2px 4px #fcc910, 0 0 25px blue, 0 0 10px darkblue;
+}
