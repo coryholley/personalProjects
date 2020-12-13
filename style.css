@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+#backgroundSplashImg {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+@keyframes splashHeader {
+    from {font-size: 1em;}
+    to {font-size: 8em;}
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+#header {
+    animation-name: splashHeader;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    width: 100vw;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'New Rocker', cursive;
+    color: #c62a88;
+    text-shadow: 1px 1px 2px #fcc910, 0 0 25px blue, 0 0 5px darkblue;
+}
