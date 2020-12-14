@@ -13,19 +13,57 @@
     left: 0;
     margin: 8px;
     z-index: 1;
-    font-size: 3em;
+    font-size: 2.5em;
     color: #f7ff00;
     text-shadow: 1px 1px 2px #fcc910, 0 0 25px blue, 0 0 5px darkblue;
 }
 
 #audioButton, #audioButtonOff {
     position: absolute;
-    top: 0;
-    left: 95%;
+    top: 1%;
+    left: 94%;
     z-index: 3;
-    font-size: 3em;
+    font-size: 2.5em;
     color: #f7ff00;
     text-shadow: 1px 1px 2px #fcc910, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes menuToMiddle {
+    from {top: 78%; left: 89%}
+    to {top: 48%; left:50%}
+}
+
+#menuRecord {
+    position: absolute;
+    top: 78%;
+    left:89%;
+    z-index: 3;
+    font-size: 8em;
+    color: #ee00ff;
+    text-shadow: 1px 1px 2px blue, 0 0 25px #fcc910, 0 0 5px darkblue;
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#wordMenu {
+    position: absolute;
+    top: 91%;
+    left: 88%;
+    z-index: 4;
+    background-color: #a207e5;
+    font-family: 'New Rocker', cursive;
+    font-size: 3em;
 }
 
 @keyframes zoomHeader {
